@@ -13,22 +13,24 @@ export default {
             label: 'Pages',
             folder: 'content/pages',
             create: true,
+            slug: "{{slug}}",
             fields: [
+                { 
+                    label: "Layout", 
+                    name: "layout", 
+                    widget: "hidden", 
+                    default: "blog" 
+                },
                 {
-                    label: 'Hero Title',
-                    name: 'hero_title',
+                    label: 'Title',
+                    name: 'title',
                     widget: 'string',
                 },
                 {
-                    label: 'Hero Description',
-                    name: 'hero_description',
-                    widget: 'markdown',
-                },
-                {
-                    label: 'Hero Image',
-                    name: 'hero_image',
-                    widget: 'image'
-                },
+                    label: 'Body',
+                    name: 'body',
+                    widget: 'markdown'
+                }
 
             ],
         },
