@@ -1,13 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 export default function Home({content}) {
   const { attributes } = content;
+  
   return (
     <>
       <h1>{attributes.hero_title}</h1>
-      <p>{attributes.hero_description}</p>
+      <ReactMarkdown>
+        {attributes.hero_description}
+      </ReactMarkdown>
       <img src={attributes.hero_image} alt='hero image' />
     </>
   );
